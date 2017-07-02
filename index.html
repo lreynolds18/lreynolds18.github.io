@@ -4,8 +4,10 @@
     <head>
         <title>Lucas Reynolds</title>    
 
+        <!--
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        -->
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -17,6 +19,8 @@
         
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
         <style>
             .col-centered {
@@ -44,32 +48,54 @@
         <div class="tab-content" >
             <div role=tabpanel" class="tab-pane row active" id="about" style="background-color: #c0c0c0;">
                 <div class="col-lg-8 col-centered row-fluid">
-                    <div class="span6">
-                    <img src="mexico.jpg" alt="Sayulita, Mexico" style="width: 40%">
-                    </div>
-                    <div class="span6">
-                        Hi I'm Lucas Reynolds!
-                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        <i class="fa fa-github-square" aria-hidden="true"></i>
-                    </div>
+                    <img class="pull-left" src="mexico.jpg" alt="Sayulita, Mexico" style="width: 50%;">
+                    <p class="pull-right">
+                        <h1>Hi - I'm Lucas Reynolds</h1><br>
+                        I specialize in data analytics and website development.  I also have a love for IoT projects!<br>
+                        I can be found around the web at lrenyolds18<br>
+                        <a href="mailto:lreynolds18@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Email</a>
+                        <a href="https://github.com/lreynolds18"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
+                        <a href="https://www.linkedin.com/in/lreynolds18/"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a>
+                    </p>
                 </div>
             </div>
 
             <div role="tabpanel" class="tab-pane row" id="work-experience"> 
                 <div class="col-lg-8 col-centered">
                     <h3>Institute For Cyber-Enabled Research MSU</h3>
-                    <p>Worked hard</p>
-
+                        <p>● Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output<br>
+                           ● Used benchmarking programs and wrote programs with OpenMP and OpenMPI to record file read and file write bandwidth<br>
+                           ● Processed the output using bash to put data in CSV format<br>
+                           ● Used python libraries pandas, numpy, and matplotlib to produce graphs and analytics to show users the benefits of scratch file system<br>
+                           ● Installed user requested software onto the high performance computer<br>
+                           ● Created and modified modulefiles written in lua<br>
+                           ● Teaching assistant for Intro to Linux, Intro to HPCC, Big Data, and Software Carpentry workshops<br>
+                           ● Lead station at Women in Engineering Summer Camp and Science Festival
+                        </p>
                     <h3>Matrix MSU</h3>
-                    <p>Worked hard</p>
-
+                        <p>Project: ARCS (Archaeological Resource Cataloguing System)<br>
+                             ● Programmed in cakephp, javascript/coffeescript, html, and css.<br>
+                             ● Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page.<br>
+                             ● Created and planned the layout for an ARCS plugin in angular javascript.<br>
+                             ● Edited the ARCS mysql database to config with the plugin.<br>
+                             ● Wrote scripts and sql injections to modify the database.<br>
+                             ● Used github and subversion for version control.<br>
+                        </p>
                     <h3>GOES MSU</h3>
-                    <p>Worked hard</p>
+                    <p>Project: Carbon2Markets MRV (Measurement, Reporting, and Verification)<br>
+                         ● Programmed in python (Django), javascript, html, and css.<br>
+                         ● Implemented a stratified plot sampling algorithm and initial values for a sampling design form.<br>
+                         ● Updated the mapping interface from Google Leaflet to ArcGis ESRI Map.<br>
+                         ● Organized large sections of code, improved code logic, and designed code to scale.<br>
+                         ● Became proficient with tools currently in place such as twitter bootstrap and javascript mapping api.<br>
+                         ● Assisted with troubleshooting IT problems.<br>
+                         ● Helped implement version control with github and bitbucket.<br>
+                    </p>
                 </div>
             </div>
 
             <div role="tabpanel" class="tab-pane row" id="projects">
-                <div class="col-md-10 col-md-offset-4">
+                <div class="col-lg-8 col-centered">
                     <h3>Voice Analyzer</h3>
                 </div>
             </div>
