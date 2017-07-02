@@ -21,13 +21,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="main.css">
 
-        <style>
-            .col-centered {
-                float: none;
-                margin: 0 auto;
-            }
-        </style>
     </head>
 
     <body style="background-color: #c0c0c0;">
@@ -49,14 +44,25 @@
             <div role=tabpanel" class="tab-pane row active" id="about" style="background-color: #c0c0c0;">
                 <div class="col-lg-8 col-centered row-fluid">
                     <img class="pull-left" src="mexico.jpg" alt="Sayulita, Mexico" style="width: 50%;">
-                    <p class="pull-right">
+                    <div class="pull-right">
                         <h1>Hi - I'm Lucas Reynolds</h1><br>
-                        I specialize in data analytics and website development.  I also have a love for IoT projects!<br>
-                        I can be found around the web at lrenyolds18<br>
-                        <a href="mailto:lreynolds18@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Email</a>
-                        <a href="https://github.com/lreynolds18"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
-                        <a href="https://www.linkedin.com/in/lreynolds18/"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a>
-                    </p>
+                        I specialize in programming.  I love data analytics, web development and IoT projects!<br>
+                        I can be found around the web at lreynolds18 but here are some links:<br>
+
+                        <div class="btn-toolbar" role="group">
+                            <a href="mailto:lreynolds18@gmail.com" class="btn btn-links btn-block">
+                                <i class="fa fa-envelope" aria-hidden="false"></i> Email
+                            </a>
+
+                            <a href="https://github.com/lreynolds18" class="btn btn-links btn-block">
+                                <i class="fa fa-github" aria-hidden="false"></i> Github
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/lreynolds18/" class="btn btn-links btn-block">
+                                <i class="fa fa-linkedin" aria-hidden="false"></i> Linkedin
+                            </a> 
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -96,6 +102,22 @@
 
             <div role="tabpanel" class="tab-pane row" id="projects">
                 <div class="col-lg-8 col-centered">
+                    <h3>Predix-Enabled Toy Train</h3>
+                    <p>Brief overview:<br>
+                        ● Worked on a team of five students in MSU senior capstone course<br>
+                        ● Designed a N-scale toy train set to demonstrate the power of GE’s Predix<br>
+                        ● Worked directly with customer to develop a completed project<br>
+                        ● Used Raspberry Pis and an Arduino to collect data about the trains<br>
+                        ● Collected data on Predix Cloud by sending data over MQTT and Websockets<br>
+                        ● Created a web application to visual the data and analytics<br>
+                        Full write-up can be found here: <a href="http://www.cse.msu.edu/~cse498/2017-01/projects/ge/">http://www.cse.msu.edu/~cse498/2017-01/projects/ge/</a><br>
+                        Code for train anayltics/sensors can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone-Source-Code">https://github.com/lreynolds18/MSU-Capstone-Source-Code</a><br>
+                        Code for website can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone">https://github.com/lreynolds18/MSU-Capstone</a><br>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9" style="position:relative;height:0;padding-bottom:56.25%">
+                            <iframe src="https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+                        </div>
+                    </p>
                     <h3>Voice Analyzer</h3>
                 </div>
             </div>
