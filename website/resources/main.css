@@ -1,17 +1,23 @@
+p {
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+h3 {
+    color: #FF5D73;
+}
+
 .col-centered {
     float: none;
     margin: 0 auto;
 }
 
-.btn-sample { 
-    color: #000000; 
-    background-color: #1BA5BD; 
-    border-color: #2C8075; 
-} 
-
 .btn-links { 
   color: #000000; 
-  background-color: #00B8B8; 
+  background-color: #FF5D73; 
   border-color: #000000; 
 } 
  
@@ -46,11 +52,11 @@ fieldset[disabled] .btn-links:active,
 .btn-links.disabled.active, 
 .btn-links[disabled].active, 
 fieldset[disabled] .btn-links.active { 
-  background-color: #00B8B8; 
+  background-color: #FF5D73; 
   border-color: #000000; 
 } 
  
 .btn-links .badge { 
-  color: #00B8B8; 
+  color: #FF5D73; 
   background-color: #000000; 
 }
