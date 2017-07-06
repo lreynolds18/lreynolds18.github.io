@@ -20,24 +20,66 @@
         <link rel="stylesheet" href="resources/main.css">
         <link rel="stylesheet" href="resources/twitter.css">
 
-    </head>
+        <script type="text/javascript">
+            (function(){
+                var cache = {};
+   
+                this.tmpl = function tmpl(str, data){
+                // Figure out if we're getting a template, or if we need to
+                // load the template - and be sure to cache the result.
+                var fn = !/\W/.test(str) ?
+                  cache[str] = cache[str] ||
+                    tmpl(document.getElementById(str).innerHTML) :
+                   
+                  // Generate a reusable function that will serve as a template
+                  // generator (and which will be cached).
+                  new Function("obj",
+                    "var p=[],print=function(){p.push.apply(p,arguments);};" +
+                     
+                    // Introduce the data as local variables using with(){}
+                    "with(obj){p.push('" +
+                     
+                    // Convert the template into pure JavaScript
+                    str
+                      .replace(/[\r\t\n]/g, " ")
+                      .split("<%").join("\t")
+                      .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+                      .replace(/\t=(.*?)%>/g, "',$1,'")
+                      .split("\t").join("');")
+                      .split("%>").join("p.push('")
+                      .split("\r").join("\\'")
+                  + "');}return p.join('');");
+                 
+                // Provide some basic currying to the user
+                return data ? fn( data ) : fn;
+                };
+            })();
 
-    <body style="background-color: #dfe3ee;"> 
-
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <a class="navbar-brand" href="#about">Lucas Reynolds</a>
-                    <ul class="nav navbar-nav">
-                        <li role="presentation" class="active"><a href="#about" role="tab" data-toggle="tab">About</a></li>
-                        <li role="presentation"><a href="#work-experience" role="tab" data-toggle="tab">Work Experience</a></li>
-                        <li role="presentation"><a href="#projects" role="tab" data-toggle="tab">Projects</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="tab-content" >
+            // A hash to store our routes:
+            var routes = {};
+            function route (path, templateId, controller) {
+              routes[path] = {templateId: templateId, controller: controller};
+            }
+            var el = null;
+            function router () {
+              // Lazy load view element:
+              el = el || document.getElementById('view');
+                // Current route url (getting rid of '#' in hash as well):
+                var url = location.hash.slice(1) || '/';
+                // Get route by url:
+                var route = routes[url];
+                // Do we have both a view and a route?
+                if (el && route.controller) {
+                  // Render route template with template engine:
+                    el.innerHTML = tmpl(route.templateId, new route.controller());
+                }
+            }
+            // Listen on hash change:
+            window.addEventListener('hashchange', router);
+            // Listen on page load:
+            window.addEventListener('load', router);
+        </script>
+        <script type="text/html" id="about">
             <div role=tabpanel" class="tab-pane row active" id="about">
                 <div class="col-lg-8 col-centered row-fluid">
                     <img class="pull-left" src="resources/mexico.jpg" alt="Sayulita, Mexico" style="width: 50%;">
@@ -64,7 +106,8 @@
                     </div>
                 </div>
             </div>
-
+        </script>
+        <script type="text/html" id="work-experience">
             <div role="tabpanel" class="tab-pane row" id="work-experience"> 
                 <div class="col-lg-8 col-centered">
                     <h3>Institute For Cyber-Enabled Research</h3>
@@ -98,7 +141,8 @@
                     </p>
                 </div>
             </div>
-
+        </script>
+        <script type="text/html" id="projects">
             <div role="tabpanel" class="tab-pane row" id="projects">
                 <div class="col-lg-8 col-centered">
                     <h3>Predix-Enabled Toy Train</h3>
@@ -130,6 +174,30 @@
                         Download script to record your voice and test models here: <a href="" download></a><br>
                 </div>
             </div>
-        </div>
+        </script>
+    </head>
+
+    <body style="background-color: #dfe3ee;"> 
+
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <a class="navbar-brand" href="#/about">Lucas Reynolds</a>
+                    <ul class="nav navbar-nav">
+                        <li role="presentation" class="active"><a href="#/about" role="tab" data-toggle="tab">About</a></li>
+                        <li role="presentation"><a href="#/work-experience" role="tab" data-toggle="tab">Work Experience</a></li>
+                        <li role="presentation"><a href="#/projects" role="tab" data-toggle="tab">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="view"></div>
+        <script type="text/javascript">
+            route('/', 'about', function () {});
+            route('/about', 'about', function () {});
+            route('/work-experience', 'work-experience', function () {});
+            route('/projects', 'projects', function () {});
+        </script>
     </body>
 </html>
