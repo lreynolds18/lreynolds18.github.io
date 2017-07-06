@@ -21,12 +21,12 @@
 
     </head>
 
-    <body style="background-color: #7C7A7A;">
+    <body style="background-color: #05668D;">
 
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="background-color: #3b5998">
             <div class="container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <a class="navbar-brand" href="javascript:void(0);">Lucas Reynolds</a>
+                    <a class="navbar-brand" href="#about">Lucas Reynolds</a>
                     <ul class="nav navbar-nav">
                         <li role="presentation" class="active"><a href="#about" role="tab" data-toggle="tab">About</a></li>
                         <li role="presentation"><a href="#work-experience" role="tab" data-toggle="tab">Work Experience</a></li>
@@ -37,7 +37,7 @@
         </nav>
 
         <div class="tab-content" >
-            <div role=tabpanel" class="tab-pane row active" id="about" style="background-color: #7C7A7A;">
+            <div role=tabpanel" class="tab-pane row active" id="about" style="background-color: #05668D;">
                 <div class="col-lg-8 col-centered row-fluid">
                     <img class="pull-left" src="resources/mexico.jpg" alt="Sayulita, Mexico" style="width: 50%;">
                     <div class="pull-right">
@@ -117,6 +117,16 @@
                         </div>
                     </p>
                     <h3>Voice Analyzer</h3>
+                    <p>Brief overview:<br>
+                        ● Created an application that can detect gender, age, and dialect in any recording of human voice<br>
+                        ● Wrote a website crawler to download over 15,000 .wav files of human voice<br>
+                        ● Wrote another script that collected provided data (gender, age, dialect) and processed the .wav files<br>
+                        ● Used librosa to process the .wav files into 153 features<br>
+                        ● Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)<br>
+                        ● Used machine learning techniques to create a reasonable good model to classify human voice<br>
+                        
+                        All code can be found here: <a href=""></a> <br>
+                        Download script to record your voice and test models here: <a href=""></a><br>
                 </div>
             </div>
         </div>
