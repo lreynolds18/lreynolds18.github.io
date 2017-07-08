@@ -1,0 +1,41 @@
+$navcolor : #3b5998;
+$ccolor   : #8b9dc3;
+$bgcolor  :  #dfe3ee;
+$bgccolor : #f7f7f7;
+$cccolor  :  #ffffff;
+$textc    :  #000000;
+
+p {
+    color: $bgcolor;
+}
+
+h1 {
+    color: $textc;
+}
+
+h3 {
+    color: $textc;
+}
+
+a:link {
+    color: $textc;
+}
+
+a:visited {
+    color: $textc;
+}
+
+a:hover {
+    color: $ccolor;
+}
+
+a:active {
+    color: $ccolor;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+

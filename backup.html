@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Lucas Reynolds</title>    
+        <link rel="shortcut icon" href="resources/favicon.ico">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="resources/main.css">
+        <link rel="stylesheet" href="resources/twitter.css">
+
+        <script type="text/javascript">
+            (function(){
+                var cache = {};
+   
+                this.tmpl = function tmpl(str, data){
+                // Figure out if we're getting a template, or if we need to
+                // load the template - and be sure to cache the result.
+                var fn = !/\W/.test(str) ?
+                  cache[str] = cache[str] ||
+                    tmpl(document.getElementById(str).innerHTML) :
+                   
+                  // Generate a reusable function that will serve as a template
+                  // generator (and which will be cached).
+                  new Function("obj",
+                    "var p=[],print=function(){p.push.apply(p,arguments);};" +
+                     
+                    // Introduce the data as local variables using with(){}
+                    "with(obj){p.push('" +
+                     
+                    // Convert the template into pure JavaScript
+                    str
+                      .replace(/[\r\t\n]/g, " ")
+                      .split("<%").join("\t")
+                      .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+                      .replace(/\t=(.*?)%>/g, "',$1,'")
+                      .split("\t").join("');")
+                      .split("%>").join("p.push('")
+                      .split("\r").join("\\'")
+                  + "');}return p.join('');");
+                 
+                // Provide some basic currying to the user
+                return data ? fn( data ) : fn;
+                };
+            })();
+
+            // A hash to store our routes:
+            var routes = {};
+            function route (path, templateId, controller) {
+              routes[path] = {templateId: templateId, controller: controller};
+            }
+            var el = null;
+            function router () {
+              // Lazy load view element:
+              el = el || document.getElementById('view');
+                // Current route url (getting rid of '#' in hash as well):
+                var url = location.hash.slice(1) || '/';
+                // Get route by url:
+                var route = routes[url];
+                // Do we have both a view and a route?
+                if (el && route.controller) {
+                  // Render route template with template engine:
+                    el.innerHTML = tmpl(route.templateId, new route.controller());
+                }
+            }
+            // Listen on hash change:
+            window.addEventListener('hashchange', router);
+            // Listen on page load:
+            window.addEventListener('load', router);
+        </script>
+        <script type="text/html" id="about">
+            <div role=tabpanel" class="tab-pane row active" id="about">
+                <div class="col-lg-8 col-centered row-fluid">
+                    <img class="pull-left" src="resources/mexico.jpg" alt="Sayulita, Mexico" style="width: 50%;">
+                    <div class="pull-right">
+                        <h1>Hi - I'm Lucas Reynolds</h1><br>
+                        <p>
+                        I love data analytics, web development and IoT projects!<br>
+                        I can be found around the web at lreynolds18<br>
+                        </p>
+
+                        <div class="btn-toolbar" role="group">
+                            <a href="mailto:lreynolds18@gmail.com" class="btn btn-links btn-block">
+                                <i class="fa fa-envelope" aria-hidden="false"></i> Email
+                            </a>
+
+                            <a href="https://github.com/lreynolds18" class="btn btn-links btn-block">
+                                <i class="fa fa-github" aria-hidden="false"></i> Github
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/lreynolds18/" class="btn btn-links btn-block">
+                                <i class="fa fa-linkedin" aria-hidden="false"></i> Linkedin
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/html" id="work-experience">
+            <div role="tabpanel" class="tab-pane row" id="work-experience"> 
+                <div class="col-lg-8 col-centered">
+                    <h3>Institute For Cyber-Enabled Research</h3>
+                        <p>● Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output<br>
+                           ● Used benchmarking programs and wrote programs with OpenMP and OpenMPI to record file read and file write bandwidth<br>
+                           ● Processed the output using bash to put data in CSV format<br>
+                           ● Used python libraries pandas, numpy, and matplotlib to produce graphs and analytics to show users the benefits of scratch file system<br>
+                           ● Installed user requested software onto the high performance computer<br>
+                           ● Created and modified modulefiles written in lua<br>
+                           ● Teaching assistant for Intro to Linux, Intro to HPCC, Big Data, and Software Carpentry workshops<br>
+                           ● Lead station at Women in Engineering Summer Camp and Science Festival
+                        </p>
+                    <h3>Matrix</h3>
+                        <p>Project: ARCS (Archaeological Resource Cataloguing System)<br>
+                             ● Programmed in cakephp, javascript/coffeescript, html, and css.<br>
+                             ● Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page.<br>
+                             ● Created and planned the layout for an ARCS plugin in angular javascript.<br>
+                             ● Edited the ARCS mysql database to config with the plugin.<br>
+                             ● Wrote scripts and sql injections to modify the database.<br>
+                             ● Used github and subversion for version control.<br>
+                        </p>
+                    <h3>Global Observatory for Ecosystem Services</h3>
+                    <p>Project: Carbon2Markets MRV (Measurement, Reporting, and Verification)<br>
+                         ● Programmed in python (Django), javascript, html, and css.<br>
+                         ● Implemented a stratified plot sampling algorithm and initial values for a sampling design form.<br>
+                         ● Updated the mapping interface from Google Leaflet to ArcGis ESRI Map.<br>
+                         ● Organized large sections of code, improved code logic, and designed code to scale.<br>
+                         ● Became proficient with tools currently in place such as twitter bootstrap and javascript mapping api.<br>
+                         ● Assisted with troubleshooting IT problems.<br>
+                         ● Helped implement version control with github and bitbucket.<br>
+                    </p>
+                </div>
+            </div>
+        </script>
+        <script type="text/html" id="projects">
+            <div role="tabpanel" class="tab-pane row" id="projects">
+                <div class="col-lg-8 col-centered">
+                    <h3>Predix-Enabled Toy Train</h3>
+                    <p>Brief overview:<br>
+                        ● Worked on a team of five students in MSU senior capstone course<br>
+                        ● Designed a N-scale toy train set to demonstrate the power of GE’s Predix<br>
+                        ● Worked directly with customer to develop a completed project<br>
+                        ● Used Raspberry Pis and an Arduino to collect data about the trains<br>
+                        ● Collected data on Predix Cloud by sending data over MQTT and Websockets<br>
+                        ● Created a web application to visual the data and analytics<br>
+                        Full write-up can be found here: <a href="http://www.cse.msu.edu/~cse498/2017-01/projects/ge/">http://www.cse.msu.edu/~cse498/2017-01/projects/ge/</a><br>
+                        Code for train anayltics/sensors can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone-Source-Code">https://github.com/lreynolds18/MSU-Capstone-Source-Code</a><br>
+                        Code for website can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone">https://github.com/lreynolds18/MSU-Capstone</a><br>
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9" style="position:relative;height:0;padding-bottom:56.25%">
+                            <iframe src="https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+                        </div>
+                    </p>
+                    <h3>Voice Analyzer</h3>
+                    <p>Brief overview:<br>
+                        ● Created an application that can detect gender, age, and dialect in any recording of human voice<br>
+                        ● Wrote a website crawler to download over 15,000 .wav files of human voice<br>
+                        ● Wrote another script that collected provided data (gender, age, dialect) and processed the .wav files<br>
+                        ● Used librosa to process the .wav files into 153 features<br>
+                        ● Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)<br>
+                        ● Used machine learning techniques to create a reasonable good model to classify human voice<br>
+                        
+                        All code can be found here: <a href="https://github.com/lreynolds18/Voice-Analyzer">https://github.com/lreynolds18/Voice-Analyzer</a> <br>
+                        Download script to record your voice and test models here: <a href="" download></a><br>
+                </div>
+            </div>
+        </script>
+    </head>
+
+    <body style="background-color: #dfe3ee;"> 
+
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <a class="navbar-brand" href="#/about">Lucas Reynolds</a>
+                    <ul class="nav navbar-nav">
+                        <li role="presentation" class="active"><a href='#/about' role="tab" data-toggle="tab">About</a></li>
+                        <li role="presentation"><a href='#/work-experience' role="tab" data-toggle="tab">Work Experience</a></li>
+                        <li role="presentation"><a href='#/projects' role="tab" data-toggle="tab">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="view"></div>
+        <script type="text/javascript">
+            route('#/', 'about', function () {});
+            route('#/about', 'about', function () {});
+            route('#/work-experience', 'work-experience', function () {});
+            route('#/projects', 'projects', function () {});
+        </script>
+    </body>
+</html>
