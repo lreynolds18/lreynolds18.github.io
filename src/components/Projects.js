@@ -1,9 +1,8 @@
 import React from 'react';
 import Interactive from 'react-interactive';
-import { Link } from 'react-router-dom';
-import { Code } from '../styles/style';
 import Iframe from 'react-iframe';
-import s from '../styles/home.style';
+import DownloadLink from 'react-download-link';
+
 
 export default function Projects() {
   const pett = [
@@ -24,20 +23,33 @@ export default function Projects() {
       "Used machine learning techniques to create a reasonable good model to classify human voice",
   ];
 
+  const link = text => (
+    <Interactive
+      as="a"
+      href={text}
+      hover={{ color: '#3b5998' }}
+      active={{ color: '#3b5998' }}
+      style={{ color: 'black', textDecoration: 'none' }}
+    >{text}</Interactive>
+  );
+
   return (
     <div>
-      <p>Projects</p>
+      <h2>Projects</h2>
       <h3>Predix-Enabled Toy Train</h3>
       <p>Brief overview:</p>
       <div>
           {pett.map(function(exp, index) {
               return <p key={ index }>{exp}</p>;
           })}
-          <p>Full write-up can be found here: <a href="http://www.cse.msu.edu/~cse498/2017-01/projects/ge/">http://www.cse.msu.edu/~cse498/2017-01/projects/ge/</a></p>
-          <p>Code for train anayltics/sensors can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone-Source-Code">https://github.com/lreynolds18/MSU-Capstone-Source-Code</a></p>
-          <p>Code for website can be found here: <a href="https://github.com/lreynolds18/MSU-Capstone">https://github.com/lreynolds18/MSU-Capstone</a></p>
+          <p>Full write-up can be found here: {link("http://www.cse.msu.edu/~cse498/2017-01/projects/ge/")}</p>
+
+          <p>Code for train anayltics/sensors can be found here: {link("https://github.com/lreynolds18/MSU-Capstone-Source-Code")}</p>
+
+          <p>Code for website can be found here: {link("https://github.com/lreynolds18/MSU-Capstone")}</p>
+
           <div>
-              <Iframe url="https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2" width="640" height="360" display="initial" position="relative" allowFullScreen/>
+              <Iframe url="https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2" width="640px" height="360px" display="initial" position="relative" allowFullScreen/>
           </div>
       </div>
       <h3>Voice Anaylzer</h3>
@@ -46,8 +58,8 @@ export default function Projects() {
           {pett.map(function(exp, index) {
               return <p key={ index }>{exp}</p>;
           })}
-          <p>All code can be found here: <a href="https://github.com/lreynolds18/Voice-Analyzer">https://github.com/lreynolds18/Voice-Analyzer</a></p>
-          <p>Download script to record your voice and test models here: <a href="" download></a></p>
+          <p>All code can be found here: {link("https://github.com/lreynolds18/Voice-Analyzer")}</p>
+          <p>Download script to record your voice and test models here: <Interactive as="a" href="../../public/test-voice.zip" hover={{ color: '#3b5998' }} active={{ color: '#3b5998' }} style={{ color: 'black', textDecoration: 'none' }}>Download test-voice.zip</Interactive></p>
       </div>
     </div>
   );

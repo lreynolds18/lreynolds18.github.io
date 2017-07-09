@@ -1,32 +1,42 @@
 import React from 'react';
-import Interactive from 'react-interactive';
+// import t ReferenceError: center is not definednteractive from 'react-interactive';
 import { Link } from 'react-router-dom';
-import { Code } from '../styles/style';
-import s from '../styles/home.style';
+// import { Code } from '../styles/style';
+// import s from '../styles/home.style';
+import { Button, ButtonToolbar } from 'react-bootstrap';
+import { FaGithubAlt, FaLinkedinSquare, FaEnvelope } from 'react-icons/lib/fa';
+
+var styles = {
+  center : {
+    float: 'none',
+    margin: '0 auto',
+  }
+};
+    
 
 export default function About() {
-  const header = "I love data analytics, web development and IoT projects!\nI can be found around the web at lreynolds18";
+    const header = "I love data analytics, web development and IoT projects!\nI can be found around the web at lreynolds18";
 
     return (
-        <div>
-            <p>About</p>
+        <div style={styles.center}>
+            <h2>About</h2>
             <img src={'../../public/mexico.jpg'} alt={'Sayulita, Mexico'}/>
             <div>
                 <p>{header}</p>
-                <div>
-                    <Interactive
-                      as="a"
+                <ButtonToolbar>
+                    <Button
+                      bsStyle="primary"
                       href="mailto:lreynolds18@gmail.com"
-                    >Email</Interactive>
-                    <Interactive
-                      as="a"
+                    ><FaEnvelope /> Email</Button>
+                    <Button
+                      bsStyle="primary"
                       href="https://github.com/lreynolds18"
-                    >Github</Interactive>
-                    <Interactive
-                      as="a"
+                    ><FaGithubAlt /> Github</Button>
+                    <Button
+                      bsStyle="primary"
                       href="https://www.linkedin.com/in/lreynolds18/"
-                    >Linkedin</Interactive>
-                </div>
+                    ><FaLinkedinSquare /> Linkedin</Button>
+                </ButtonToolbar>
             </div>
         </div>
     );

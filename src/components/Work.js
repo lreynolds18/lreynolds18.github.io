@@ -34,19 +34,19 @@ export default function Work() {
 
   return (
     <div>
-        <h1>Work Experience</h1>
+        <h2>Work Experience</h2>
         <div>
-            <h1>Institute for Cyber-Enabled Research</h1>
+            <h3>Institute for Cyber-Enabled Research</h3>
             {icer.map(function(exp, index) {
                 return <p key={ index }>{exp}</p>;
             })}
 
-            <h1>Matrix</h1>
+            <h3>Matrix</h3>
             {matrix.map(function(exp, index) {
                 return <p key={ index }>{exp}</p>;
             })}
         
-            <h1>Global Observatory for Ecosystem Services</h1>
+            <h3>Global Observatory for Ecosystem Services</h3>
             {goes.map(function(exp, index) {
                 return <p key={ index }>{exp}</p>;
             })}
