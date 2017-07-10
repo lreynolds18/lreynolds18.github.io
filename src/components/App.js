@@ -51,6 +51,9 @@ export default function App() {
           </Col>
           <Col xs={1} md={1}></Col>
         </Row>
+        <Row>
+          <Col xs={12} style={{ height : "100px"}}></Col>
+        </Row>
       </Grid>
     </div>
 
