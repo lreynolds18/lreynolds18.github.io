@@ -55,7 +55,7 @@ export default function Projects() {
       <h3>Voice Anaylzer</h3>
       <p>Brief overview:</p>
       <div>
-          {pett.map(function(exp, index) {
+          {voice.map(function(exp, index) {
               return <p key={ index }>{exp}</p>;
           })}
           <p>All code can be found here: {link("https://github.com/lreynolds18/Voice-Analyzer")}</p>
