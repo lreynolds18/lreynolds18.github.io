@@ -16,7 +16,7 @@ export default function About() {
             <h2>About</h2>
             <Grid>
                 <Row>
-                    <Col xs={5} md={5} style={{ "padding-left": "0px", "padding-right": "0px" }}>
+                    <Col xs={5} md={5} style={{ "paddingLeft": "0px", "paddingRight": "0px" }}>
                         <img src={'../../public/mexico.jpg'} alt={'Sayulita, Mexico'} className={"img-responsive"} />
                     </Col>
 
