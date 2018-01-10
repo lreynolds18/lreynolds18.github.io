@@ -8,8 +8,9 @@ import { FaGithubAlt, FaLinkedinSquare, FaEnvelope } from 'react-icons/lib/fa';
 
 
 export default function About() {
-    const header = "I love data analytics, web development and IoT projects!";
-    const header2 = "I can be found around the web at lreynolds18";
+    const header = "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (compilers, assembly code <3), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics) and robotics.  In my free time, I enjoy the outdoors, learning French and cooking."
+        
+    const header2 = "Find me around the web at lreynolds18";
     const data = [{date: "12/2/18", text: "Connected to facebook"},
                   {url: "www.google.com", date: "11/2/13", text: "Connected to google"},
                   {url: "www.google.com", date: "11/2/13", text: "Connected to google"},
@@ -27,7 +28,7 @@ export default function About() {
                     </Col>
 
                     <Col xs={6} md={6}>
-                        <h3>Hi - I'm Lucas Reynolds</h3>
+                        <h3>Hi - I'm Lucas</h3>
                         <p>{header}</p>
                         <p>{header2}</p>
                         <ButtonToolbar>
