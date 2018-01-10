@@ -12,7 +12,9 @@ import { Route, Link, Switch } from 'react-router-dom'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
 
 import Interactive from 'react-interactive';
-import { Grid, Row, Col, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Grid, Row, Col, Navbar, Nav, NavItem, Button, ButtonToolbar } from 'react-bootstrap';
+import { FaGithubAlt, FaLinkedinSquare, FaEnvelope } from 'react-icons/lib/fa';
+
 
 
 import Blog from       './reducers/BlogPostReducer';
@@ -66,6 +68,8 @@ ReactDOM.render(
             <NavItem href="/?p=work-experience" eventKey={2}>Work Experience</NavItem>
             <NavItem href="/?p=projects" eventKey={3}>Projects</NavItem>
           </Nav>
+
+
         </Navbar>
 
         <Grid>
