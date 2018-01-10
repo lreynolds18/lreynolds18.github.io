@@ -59,7 +59,7 @@ ReactDOM.render(
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Hi - I'm Lucas Reynolds</Link>
+              <Link to="/">Lucas Reynolds</Link>
             </Navbar.Brand>
           </Navbar.Header>
 
