@@ -23,10 +23,10 @@ import Talks from      './reducers/TalksReducer';
 import Resume from     './reducers/ResumeReducer';
 import Timeline from   './reducers/TimelineReducer';
 
-import PageNotFound from './components/PageNotFound';
-import About from './components/About';
-import Work from './components/Work';
-import Projects from './components/Projects';
+import PageNotFound from './containers/PageNotFound';
+import About from './containers/About';
+import Work from './containers/Work';
+import Projects from './containers/Projects';
 // import App from './components/App';
 
 import s from './styles/app.style';
