@@ -4,14 +4,14 @@ import { Grid, Row, Col } from 'react-bootstrap';
 // import { Grid, Row, Col, Navbar, Nav, NavItem } from 'react-bootstrap';
 
 import s from '../styles/app.style';
-import MainNavbar from '../components/MainNavbar';
+import AppNavbar from '../components/AppNavbar';
 
 export default class App extends Component {
 
   render() {
     return (
       <div>
-        <MainNavbar />
+        <AppNavbar />
 
         <Grid>
           <Row>

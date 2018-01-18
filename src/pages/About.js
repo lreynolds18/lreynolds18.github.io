@@ -1,16 +1,32 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
-import Changelog from '../components/Changelog';
-import AboutButtons from '../components/AboutButtons';
+import Changelog from '../components/AboutChangelog';
+import Buttons from '../components/AboutButtons';
+// import AboutChangelog from '../containers/AboutChangelog';
 
 
-export default class About extends Component {
+class About extends Component {
+  componentDidMount() {
+    fetchChangelog(this.props.ChangelogFilter).then(Changelog =>
+      console.log(this.props.ChangelogFilter, Changelog)
+    );
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.ChangelogFilter !== prevProps.ChangelogFilter) {
+      fetchChangelog(this.props.ChangelogFilter).then(Changelog =>
+        console.log(this.props.ChangelogFilter, Changelog)
+      );
+    }
+  }
+
   render() {
-    const header = "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (compilers, assembly code <3), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics) and robotics.  In my free time, I enjoy the outdoors, learning French and cooking.";
+    const header1 = "I'm Lucas";
+    const header2 = "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (compilers, assembly code <3), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics) and robotics.  In my free time, I enjoy the outdoors, learning French and cooking.";
           
-    const header2 = "Find me around the web at lreynolds18";
+    const header3 = "Find me around the web at lreynolds18";
 
     return (
       <div>
@@ -22,10 +38,10 @@ export default class About extends Component {
             </Col>
 
             <Col xs={6} md={6}>
-              <h3>Hi - I'm Lucas</h3>
-              <p>{header}</p>
+              <h3>{header1}</h3>
               <p>{header2}</p>
-              <AboutButtons />
+              <p>{header3}</p>
+              <Buttons />
             </Col>
           </Row>
 
@@ -49,3 +65,10 @@ export default class About extends Component {
     );
   }
 }
+
+
+const mapStateToProps = state => ({
+  ChangelogData: state.changelog
+});
+
+export default connect(mapStateToProps)(About);
