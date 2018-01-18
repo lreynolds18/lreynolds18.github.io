@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { FaGithubAlt, FaLinkedinSquare, FaEnvelope } from 'react-icons/lib/fa';
 

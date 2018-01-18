@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Table, Grid, Row, Col, Button, ButtonToolbar } from 'react-bootstrap';
 import { connect } from 'react-redux';

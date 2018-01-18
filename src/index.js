@@ -1,34 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import { Router, browserHistory } from 'react-router';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import createHistory from 'history/createBrowserHistory';
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
+import { render } from 'react-dom';
 
 import Root from './components/Root';
-import ChangelogReducer from  './reducers/ChangelogReducer';
+import configureStore from './configureStore';
 
-// Create a history of your choosing (we're using a browser history in this case)
-const history = createHistory()
+const values = configureStore();
+const store = values.store;
+const history = values.history;
 
-// Build the middleware for intercepting and dispatching navigation actions
-const middleware = routerMiddleware(history)
-
-// Add the reducer to your store on the `router` key
-// Also apply our middleware for navigating
-const store = createStore(
-    combineReducers({
-        ChangelogReducer,
-        router: routerReducer
-    }),
-    applyMiddleware(middleware)
-)
-console.log(store.getState());
-
-// console.log(browserHistory);
-// console.log( window.location.pathname );
-
-ReactDOM.render(
+render(
   <Root store={store} history={history} />,
   document.getElementById('root')
 );
