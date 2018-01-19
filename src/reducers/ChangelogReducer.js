@@ -36,18 +36,29 @@ const data = [
   },
 ];
 
-export default function(state={}, action) {
+const ChangelogReducer = (state={}, action) => {
   console.log("ChangelogReducer was called with state", state, "and action", action);
   
-  state.changelog = data;
   switch (action.type) {
-    case "@@router/LOCATION_CHANGE" : 
-      if (action.payload.pathname === "/about") {
-        state.changelog = data;
-      }
-      return state;
     default:
-        return state;
+      state.changelog = data;
+      return state;
   }
 };
 
+export default ChangelogReducer;
+
+export const getChangelog = (changelog, filter) => {
+  console.log("here", changelog, filter);
+  switch (filter) {
+    case 'all':
+      return changelog;
+    case 'recent':
+      if (changelog.length > 10) {
+        return changelog.slice(0, 10);
+      }
+      return changelog;
+    default:
+      throw new Error("Unknown filter: " + filter + ".");
+  }
+};

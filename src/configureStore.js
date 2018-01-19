@@ -18,7 +18,7 @@ const configureStore = () => {
       ChangelogReducer,
       router: routerReducer
     }),
-    applyMiddleware(middleware)
+     applyMiddleware(middleware)
   )
   return {
     store: store, 

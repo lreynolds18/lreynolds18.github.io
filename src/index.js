@@ -8,6 +8,7 @@ const values = configureStore();
 const store = values.store;
 const history = values.history;
 
+
 render(
   <Root store={store} history={history} />,
   document.getElementById('root')
