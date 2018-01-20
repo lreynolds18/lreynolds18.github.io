@@ -3,6 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
+import Projects from '../components/Projects';
 import Changelog from '../components/AboutChangelog';
 import Buttons from '../components/AboutButtons';
 import getChangelog from '../reducers/ChangelogReducer';
@@ -61,6 +62,7 @@ class About extends Component {
           <Row>
             <Col xs={10} md={10}>
               <h4>Projects</h4>
+              <Projects />
             </Col>
           </Row>
         </Grid>
