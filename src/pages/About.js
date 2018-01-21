@@ -46,6 +46,7 @@ class About extends Component {
               <p>{header2}</p>
               <p>{header3}</p>
               <Buttons />
+              <strong>Note: website is currently under construction</strong>
             </Col>
           </Row>
 
