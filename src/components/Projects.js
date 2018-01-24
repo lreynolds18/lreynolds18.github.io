@@ -52,16 +52,16 @@ export default class Projects extends Component {
             return <div key={item.id}>
               <Row>
                 <Col>
-                  <Card> 
+                  <Card style={{"background": "#FDFDFD"}}> 
           {/* <ImageHeader imageSrc={item.image} /> */}
-                    <CardHeader>{item.title}</CardHeader>
-                    <CardBody>
+                    <CardHeader style={{"background": "#FDFDFD"}}>{item.title}</CardHeader>
+                    <CardBody style={{"background": "#FDFDFD"}}>
                       <p>Stack: {item.stack}</p>
                       {item.overview.map(function(exp, index) {
                           return <p key={ index }>{exp}</p>;
                       })}
                     </CardBody>
-                    <CardFooter><div dangerouslySetInnerHTML={ item.links } /></CardFooter>
+                    <CardFooter style={{"background": "#FDFDFD"}}><div dangerouslySetInnerHTML={ item.links } /></CardFooter>
                   </Card>
                 </Col>
               </Row></div>;

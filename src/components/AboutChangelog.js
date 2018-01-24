@@ -236,20 +236,20 @@ export default class Changelog extends Component {
         <Table bordered condensed hover style={{"border" : "0.5px solid #000000"}}>
           <thead style={{"border" : "0.5px solid #000000"}}>
             <tr style={{"border" : "0.5px solid #000000"}}>
-              <th style={{"border" : "0.5px solid #000000"}}>Date</th>
-              <th style={{"border" : "0.5px solid #000000"}}>Event</th>
+              <th style={{"border" : "0.5px solid #000000", "background": "#FDFDFD"}}>Date</th>
+              <th style={{"border" : "0.5px solid #000000", "background": "#FDFDFD"}}>Event</th>
             </tr>
           </thead>
           <tbody>
             {ChangelogData.reverse().map(function(item, idx) {
               if ((idx < 10 && showRecent) || !showRecent) {
                 if (item.url) {
-                  return <tr key={idx} style={{"border" : "0.5px solid #000000"}}>
+                  return <tr key={idx} style={{"border" : "0.5px solid #000000", "background": "#FDFDFD"}}>
                            <td style={{"border" : "0.5px solid #000000"}}><a href={item.url}>{item.date}</a></td>
                            <td style={{"border" : "0.5px solid #000000"}}><a href={item.url}>{item.text}</a></td>
                          </tr>;
                 } else {
-                  return <tr key={idx} style={{"border" : "0.5px solid #000000"}}>
+                  return <tr key={idx} style={{"border" : "0.5px solid #000000", "background": "#FDFDFD"}}>
                            <td style={{"border" : "0.5px solid #000000"}}>{item.date}</td>
                            <td style={{"border" : "0.5px solid #000000"}}>{item.text}</td>
                          </tr>;
