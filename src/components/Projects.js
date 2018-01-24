@@ -40,9 +40,14 @@ export default class Projects extends Component {
       }, 
     ];
 
+    var style = {
+      height: '100%',
+      overflow: 'auto'
+    };
+
     return (
-      <div>
-        <Grid>        
+      <div style={ style }>
+        <Grid>
           {projects.map(item => {
             return <div key={item.id}>
               <Row>
