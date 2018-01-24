@@ -223,8 +223,11 @@ export default class Changelog extends Component {
         text: "Redesigned personal website",
         importance: "low"
       },
-
     ];
+
+    console.log(this.props.filter);
+
+    var showRecent = typeof this.props.filter == 'undefined' || this.props.filter == "recent" ? true : false;
 
 
     return (
@@ -239,7 +242,7 @@ export default class Changelog extends Component {
           </thead>
           <tbody>
             {ChangelogData.reverse().map(function(item, idx) {
-              if (idx < 10) {
+              if ((idx < 10 && showRecent) || !showRecent) {
                 if (item.url) {
                   return <tr key={idx} style={{"border" : "0.5px solid #000000"}}>
                            <td style={{"border" : "0.5px solid #000000"}}><a href={item.url}>{item.date}</a></td>
@@ -258,8 +261,8 @@ export default class Changelog extends Component {
         <ButtonToolbar>
           <Button
             bsStyle="primary"
-            href="/about/?all=true"
-          >Show All</Button>
+            href={ showRecent ? "/about/all" : "/about/recent" }
+          >{ showRecent ? "Show All" : "Show Recent" }</Button>
         </ButtonToolbar>
       </div>
     );
