@@ -261,7 +261,7 @@ export default class Changelog extends Component {
         <ButtonToolbar>
           <Button
             bsStyle="primary"
-            href={ showRecent ? "/about/all" : "/about/recent" }
+            href={ showRecent ? "/?p=about/all" : "/about/recent" }
           >{ showRecent ? "Show All" : "Show Recent" }</Button>
         </ButtonToolbar>
       </div>

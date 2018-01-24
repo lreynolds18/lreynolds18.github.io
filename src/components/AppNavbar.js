@@ -14,9 +14,9 @@ export default class MainNavbar extends Component {
         </Navbar.Header>
       
         <Nav>
-          <NavItem href="/about" eventKey={1}>About</NavItem>
-          <NavItem href="/work-experience" eventKey={2}>Work Experience</NavItem>
-          <NavItem href="/projects" eventKey={3}>Projects</NavItem>
+          <NavItem href="/?p=about" eventKey={1}>About</NavItem>
+          <NavItem href="/?p=work-experience" eventKey={2}>Work Experience</NavItem>
+          <NavItem href="/?p=projects" eventKey={3}>Projects</NavItem>
         </Nav>
       </Navbar>
     );
