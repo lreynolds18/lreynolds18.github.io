@@ -223,6 +223,13 @@ export default class Changelog extends Component {
         text: "Redesigned personal website",
         importance: "low"
       },
+      {
+        id: "30",
+        url: "",
+        date: "1/24/18-Present", 
+        text: "3d printer in operation",
+        importance: "low"
+      },
     ];
 
     console.log(this.props.filter);
