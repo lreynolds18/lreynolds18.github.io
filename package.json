@@ -8,9 +8,14 @@
     "build": "webpack -p",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "git-add-build": "git add build/bundle.js",
+    "git-add-build": "git add build/bundle.js"
   },
-  "pre-commit": [ "precommit-msg", "lint", "build", "git-add-build" ],
+  "pre-commit": [
+    "precommit-msg",
+    "lint",
+    "build",
+    "git-add-build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lreynolds18/lreynolds18.github.io.git"
@@ -18,6 +23,7 @@
   "author": "Lucas Reynolds <lreynolds18@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dom-helpers": "^3.3.1",
     "history": "^4.7.2",
     "prop-types": "^15.5.8",
     "react": "^16.2.0",
