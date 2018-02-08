@@ -1,5 +1,5 @@
 export default function(state={}, action) {
-    console.log("Blogpostreducer was called with state", state, "and action", action);
+    // console.log("Blogpostreducer was called with state", state, "and action", action);
 
     switch (action.type) {
         default:

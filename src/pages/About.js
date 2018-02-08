@@ -26,7 +26,6 @@ class About extends Component {
   }
 
   render() {
-    console.log(this.props.match);
     const header1 = "I'm Lucas";
     const header2 = "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (linux, compilers, assembly, networking, cyber security, etc), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics), robotics, 3d printing and high performance computing.  In my free time, I enjoy the outdoors, learning French and cooking.";
           

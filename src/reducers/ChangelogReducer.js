@@ -49,7 +49,7 @@ const ChangelogReducer = (state={}, action) => {
 export default ChangelogReducer;
 
 export const getChangelog = (changelog, filter) => {
-  console.log("here", changelog, filter);
+  // console.log("here", changelog, filter);
   switch (filter) {
     case 'all':
       return changelog;

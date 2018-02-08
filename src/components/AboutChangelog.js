@@ -232,10 +232,7 @@ export default class Changelog extends Component {
       },
     ];
 
-    console.log(this.props.filter);
-
     var showRecent = typeof this.props.filter == 'undefined' || this.props.filter == "recent" ? true : false;
-
 
     return (
       <div>
