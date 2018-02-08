@@ -1,29 +1,31 @@
 {
-  "name": "spa-github-pages",
-  "version": "5.0.0",
+  "name": "reynolds-personal-page",
+  "version": "0.0.1",
   "private": true,
-  "description": "Single Page Apps for GitHub Pages",
+  "description": "Personal website",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p"
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/lreynolds18/lreynolds18.github.io.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Lucas Reynolds <lreynolds18@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "history": "^4.7.2",
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.5.4",
-    "react-download-link": "^1.0.1",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-download-link": "^2.1.0",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.5",
     "react-iframe": "^1.0.7",
-    "react-interactive": "^0.6.5",
+    "react-interactive": "^0.8.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^5.0.0-alpha.6",
@@ -33,17 +35,18 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "webpack": "^2.4.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "pre-commit": "^1.2.2",
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.4.5"
   }
 }
