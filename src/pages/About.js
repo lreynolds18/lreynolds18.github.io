@@ -26,21 +26,31 @@ class About extends Component {
   }
 
   render() {
-    const header1 = "I'm Lucas";
+    const header1 = "Hi - I'm Lucas";
     const header2 = "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (linux, compilers, assembly, networking, cyber security, etc), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics), robotics, 3d printing and high performance computing.  In my free time, I enjoy the outdoors, learning French and cooking.";
           
     const header3 = "Find me around the web at lreynolds18";
+
+    var colstyle = {
+      paddingLeft: '0px', 
+      paddingRight: '0px'
+    };
+
+    var imgstyle = {
+      maxHeight: '100%', 
+      maxWidth: '100%'
+    };
 
     return (
       <div>
         <h2>About</h2>
         <Grid>
           <Row>
-            <Col xs={2} md={2} style={{ "paddingLeft": "0px", "paddingRight": "0px" }}>
-              <img src={'../../public/mexico.jpg'} alt={'Sayulita, Mexico'} className={"img-responsive"} />
+            <Col xs={3} md={3} style={ colstyle }>
+              <img src={'../../public/mexico.jpg'} alt={'Sayulita, Mexico'} className={"img-responsive"} style={ imgstyle }/>
             </Col>
 
-            <Col xs={6} md={6}>
+            <Col xs={7} md={7}>
               <h3>{header1}</h3>
               <p>{header2}</p>
               <p>{header3}</p>
