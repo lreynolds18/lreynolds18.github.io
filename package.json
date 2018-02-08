@@ -5,10 +5,12 @@
   "description": "Personal website",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
-    "build": "webpack -p"
+    "build": "webpack -p",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "git-add-build": "git add build/bundle.js",
   },
+  "pre-commit": [ "precommit-msg", "lint", "build", "git-add-build" ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lreynolds18/lreynolds18.github.io.git"
