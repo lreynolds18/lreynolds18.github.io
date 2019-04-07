@@ -14,7 +14,6 @@
         "date": "8/31/16 - 5/1/17",
         "title": "GE PETT: Predix-Enabled Toy Train",
         "stack": "Python (RPi.GPIO, paho.mqtt, csv, json, neopixel, Adafruit_BMP), C (Arduino), JavaScript (Polymer), Predix, Pi-SPROG, Raspberry Pi, Arduino, HTML, CSS",
-        "image": "../../public/projects/pett/team-photo.jpg",
         "overview": [ 
           "Worked on a team of five students in MSU senior capstone course",
           "Designed a N-scale toy train set to demonstrate the power of GE’s Predix",
@@ -23,14 +22,38 @@
           "Collected data on Predix Cloud by sending data over MQTT and Websockets",
           "Created a web application to visual the data and analytics"
         ],
-        "links": {"__html": "<p><img src='../../public/projects/pett/team-photo.jpg' alt='team_photo'> <br /> <br />Full write-up can be found here: <a href='http://www.cse.msu.edu/~cse498/2017-01/projects/ge/'>http://www.cse.msu.edu/~cse498/2017-01/projects/ge/</a></p> <br /> <p>Code for train anayltics/sensors can be found here: <a href='https://github.com/lreynolds18/MSU-Capstone-Source-Code'>https://github.com/lreynolds18/MSU-Capstone-Source-Code</a></p> <br /> <p>Code for website can be found here: <a href='https://github.com/lreynolds18/MSU-Capstone'>https://github.com/lreynolds18/MSU-Capstone</a></p> <br /><div> <iframe src='https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2' width='640px' height='360px' display='initial' position='relative' allowFullScreen/></iframe> </div>"}
+        "images": [
+          {
+            "url": "projects/pett/team-photo.jpg",
+            "label": "Team photo"
+          }
+        ],
+        "player": [
+          "https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2"
+        ],
+        "links": [
+          {
+            "url": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/",
+            "label": "Design day poster can be found here: ",
+            "link": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/"
+          },
+          {
+            "url": "https://github.com/lreynolds18/MSU-Capstone-Source-Code",
+            "label": "Code that controls trains can be found here: ",
+            "link": "https://github.com/lreynolds18/MSU-Capstone-Source-Code"
+          },
+          {
+            "url": "https://github.com/lreynolds18/MSU-Capstone",
+            "label": "Code for website can be found here: ",
+            "link": "https://github.com/lreynolds18/MSU-Capstone"
+          }
+        ]
       },     
       {
         "id": "2",
         "date": "8/31/16 - 5/1/17",
         "title": "Voice Analyzer",
         "stack": "Python (pandas, librosa, sklearn, scipy, numpy, matplotlib, urllib, BeautifulSoup, Jupyter Notebook)",
-        "image": "",
         "overview": [ 
           "Created an application that can detect gender, age, and dialect in any recording of human voice",
           "Wrote a website crawler to download over 15,000 .wav files of human voice",
@@ -39,7 +62,20 @@
           "Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)",
           "Used machine learning techniques to create a reasonable good model to classify human voice"
         ],
-        "links": {"__html": "<p>All code can be found here: <a href='https://github.com/lreynolds18/Voice-Analyzer'>https://github.com/lreynolds18/Voice-Analyzer</a></p> <br /> <p>Download script to record your voice and test models here: <a href='../../public/test-voice.zip'>here</a></p>"}
+        "images": [],
+        "player": [],
+        "links": [
+          {
+            "url": "https://github.com/lreynolds18/Voice-Analyzer",
+            "label": "All code can be found here: ",
+            "link": "https://github.com/lreynolds18/Voice-Analyzer"
+          },
+          {
+            "url": "../../public/test-voice.zip",
+            "label": "Download script to record your voice and test models here: ",
+            "link": "here"
+          }
+        ]
       }, 
       {
         "id": "3",
@@ -57,7 +93,34 @@
           "Soldered wires directly on hot bed",
           "Installed a proximity sensor to ALB (auto level bed)"
         ],
-        "links": {"__html": "<p>I built out the kit that was shipped to me <br /><img src='../../public/projects/anet/box.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/half_built.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/mostly_built.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/fully_built.jpg' width='480px' height='480px'><br /><br />I've been pretty happy with the print quality.  Here's the printer printing out benchy which is a torture test for 3d printers<br /><img src='../../public/projects/anet/benchy_print.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/final_benchy.jpg' width='480px' height='480px'><br /><br />Finally, here is some random prints<br /><img src='../../public/projects/anet/random_prints.jpg' width='480px' height='480px'></p>"}
+        "images": [
+          {
+            "url": "projects/anet/box.jpg",
+            "label": "I built out the kit that was shipped to me"
+          },
+          {
+            "url": "projects/anet/half_built.jpg",
+            "label": ""
+          },
+          {
+            "url": "projects/anet/fully_built.jpg",
+            "label": ""
+          },
+          {
+            "url": "projects/anet/benchy_print.jpg",
+            "label": "I've been pretty happy with the print quality.  Here's the printer printing out benchy which is a torture test for 3d printers"
+          },
+          {
+            "url": "projects/anet/final_benchy.jpg",
+            "label": ""
+          },
+          {
+            "url": "projects/anet/random_prints.jpg",
+            "label": "Finally, here are some random prints"
+          }
+        ],
+        "player": [],
+        "links": []
       }
     ]
   },
