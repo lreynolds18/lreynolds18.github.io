@@ -1,0 +1,104 @@
+{
+  "About": {
+    "Title": "About",
+    "Header1": "Hi - I'm Lucas",
+    "Header2": "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (linux, compilers, assembly, networking, cyber security, etc), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics), robotics, 3d printing and high performance computing.  In my free time, I enjoy the outdoors, learning French and cooking.",
+    "Header3": "Find me around the web at lreynolds18",
+    "ImageAlt": "Sayulita, Mexico"
+  },
+  "Projects": {
+    "Title": "Projects",
+    "Projects": [
+      {
+        "id": "1",
+        "date": "8/31/16 - 5/1/17",
+        "title": "GE PETT: Predix-Enabled Toy Train",
+        "stack": "Python (RPi.GPIO, paho.mqtt, csv, json, neopixel, Adafruit_BMP), C (Arduino), JavaScript (Polymer), Predix, Pi-SPROG, Raspberry Pi, Arduino, HTML, CSS",
+        "image": "../../public/projects/pett/team-photo.jpg",
+        "overview": [ 
+          "Worked on a team of five students in MSU senior capstone course",
+          "Designed a N-scale toy train set to demonstrate the power of GE’s Predix",
+          "Worked directly with customer to develop a completed project",
+          "Used Raspberry Pis and an Arduino to collect data about the trains",
+          "Collected data on Predix Cloud by sending data over MQTT and Websockets",
+          "Created a web application to visual the data and analytics"
+        ],
+        "links": {"__html": "<p><img src='../../public/projects/pett/team-photo.jpg' alt='team_photo'> <br /> <br />Full write-up can be found here: <a href='http://www.cse.msu.edu/~cse498/2017-01/projects/ge/'>http://www.cse.msu.edu/~cse498/2017-01/projects/ge/</a></p> <br /> <p>Code for train anayltics/sensors can be found here: <a href='https://github.com/lreynolds18/MSU-Capstone-Source-Code'>https://github.com/lreynolds18/MSU-Capstone-Source-Code</a></p> <br /> <p>Code for website can be found here: <a href='https://github.com/lreynolds18/MSU-Capstone'>https://github.com/lreynolds18/MSU-Capstone</a></p> <br /><div> <iframe src='https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2' width='640px' height='360px' display='initial' position='relative' allowFullScreen/></iframe> </div>"}
+      },     
+      {
+        "id": "2",
+        "date": "8/31/16 - 5/1/17",
+        "title": "Voice Analyzer",
+        "stack": "Python (pandas, librosa, sklearn, scipy, numpy, matplotlib, urllib, BeautifulSoup, Jupyter Notebook)",
+        "image": "",
+        "overview": [ 
+          "Created an application that can detect gender, age, and dialect in any recording of human voice",
+          "Wrote a website crawler to download over 15,000 .wav files of human voice",
+          "Wrote another script that collected provided data (gender, age, dialect) and processed the .wav files",
+          "Used librosa to process the .wav files into 153 features",
+          "Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)",
+          "Used machine learning techniques to create a reasonable good model to classify human voice"
+        ],
+        "links": {"__html": "<p>All code can be found here: <a href='https://github.com/lreynolds18/Voice-Analyzer'>https://github.com/lreynolds18/Voice-Analyzer</a></p> <br /> <p>Download script to record your voice and test models here: <a href='../../public/test-voice.zip'>here</a></p>"}
+      }, 
+      {
+        "id": "3",
+        "date": "1/28/18 - Present",
+        "title": "Anet A8",
+        "stack": "3d Printing, Arduino, Cura, Blender, Tinkercad",
+        "image": "",
+        "overview": [ 
+          "Built and upgraded an Anet A8 printer.",
+          "Installed an X belt tensior and X axis drag chain",
+          "Installed an Y belt tensior and Y axis drag chain",
+          "Installed a filament guide",
+          "Installed various frame supports",
+          "Installed mosfet on hot bed and extruder to increase safety",
+          "Soldered wires directly on hot bed",
+          "Installed a proximity sensor to ALB (auto level bed)"
+        ],
+        "links": {"__html": "<p>I built out the kit that was shipped to me <br /><img src='../../public/projects/anet/box.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/half_built.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/mostly_built.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/fully_built.jpg' width='480px' height='480px'><br /><br />I've been pretty happy with the print quality.  Here's the printer printing out benchy which is a torture test for 3d printers<br /><img src='../../public/projects/anet/benchy_print.jpg' width='480px' height='480px'><br /><img src='../../public/projects/anet/final_benchy.jpg' width='480px' height='480px'><br /><br />Finally, here is some random prints<br /><img src='../../public/projects/anet/random_prints.jpg' width='480px' height='480px'></p>"}
+      }
+    ]
+  },
+  "Work": {
+    "Title": "Work Experience",
+    "Jobs": [
+      {
+        "Company": "Institute of Cyber-Enabled Research",
+        "Position": "Technical Student",
+        "Description": [
+          "Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output",
+          "Used benchmarking programs and wrote programs with OpenMP and OpenMPI to record file read and file write bandwidth", 
+          "Processed the output using bash to put data in CSV format",
+          "Used python libraries pandas, numpy, and matplotlib to produce graphs and analytics to show users the benefits of scratch file system",
+          "Installed user requested software onto the high performance computer",
+          "Created and modified modulefiles written in lua",
+          "Teaching assistant for Intro to Linux, Intro to HPCC, Big Data, and Software Carpentry workshops",
+          "Lead station at Women in Engineering Summer Camp and Science Festival"
+        ]
+      },
+      {
+        "Company": "Matrix",
+        "Position": "Back-end Developer",
+        "Description": [
+          "Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page",
+          "Created and planned the layout for an ARCS plugin in angular javascript",
+          "Edited the ARCS mysql database to config with the plugin",
+          "Wrote scripts to clean up database"
+        ]
+      },
+      {
+        "Company": "Global Observatory for Ecosystem Services",
+        "Position": "Back-end Developer",
+        "Description": [
+          "Programmed in python (Django), javascript, html, and css",
+          "Implemented a stratified plot sampling algorithm and initial values for a sampling design form",
+          "Updated the mapping interface from Google Leaflet to ArcGis ESRI Map",
+          "Organized large sections of code, improved code logic, and designed code to scale",
+          "Assisted with troubleshooting IT problems"
+        ]
+      }
+    ]
+  }
+}
