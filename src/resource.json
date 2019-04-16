@@ -128,8 +128,25 @@
     "Title": "Work Experience",
     "Jobs": [
       {
+        "Company": "Hyland Software",
+        "Position": "Developer 1, Metadata and EDM",
+        "Company-Logo": "logo/hyland.png",
+        "Stack": ["Angular (TypeScript)", "ASP.NET (C#, JavaScript, Less)", "WPF (C#)", "C++", "Git", "TFS", "Docker", "Microsoft SQL Server", "Oracle Database"],
+        "Description": [
+          "Completed Software Change Request to fix bugs and implement features on enterprise software used by 20,000 global businesses",
+          "Increased product market share by enabling Vietnamese for Web Server", 
+          "Made huge improvement to internal UI libraries used in Web Client",
+          "Threat modeled security vulnerabilities and determined/fixed vulnerabilites found from static code analyzers",
+          "Designed new modernization product for keywords and electronic document management",
+          "Provided constructive feedback on code reviews",
+          "Provided solution to customers facing issues related to EDM, Keywords, and Web Client and Server"
+        ]
+      },
+      {
         "Company": "Institute of Cyber-Enabled Research",
         "Position": "Technical Student",
+        "Company-Logo": "logo/icer.png",
+        "Stack": ["C++ (OpenMP, OpenMPI, CUDA)", "Python (Pandas, NumPy, Matplotlib)", "Bash", "Git", "Linux (CentOS)", "HPC"],
         "Description": [
           "Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output",
           "Used benchmarking programs and wrote programs with OpenMP and OpenMPI to record file read and file write bandwidth", 
@@ -144,6 +161,8 @@
       {
         "Company": "Matrix",
         "Position": "Back-end Developer",
+        "Company-Logo": "logo/matrix.png",
+        "Stack": ["PHP (CakePHP)", "JavaScript (Vanilla, jQuery, AngularJS)", "MySQL", "SVN", "HTML", "CSS", "Linux (Debian)"],
         "Description": [
           "Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page",
           "Created and planned the layout for an ARCS plugin in angular javascript",
@@ -154,6 +173,8 @@
       {
         "Company": "Global Observatory for Ecosystem Services",
         "Position": "Back-end Developer",
+        "Company-Logo": "logo/goes.png",
+        "Stack": ["Python (django)", "JavaScript (Vanilla)"],
         "Description": [
           "Programmed in python (Django), javascript, html, and css",
           "Implemented a stratified plot sampling algorithm and initial values for a sampling design form",
@@ -161,6 +182,23 @@
           "Organized large sections of code, improved code logic, and designed code to scale",
           "Assisted with troubleshooting IT problems"
         ]
+      }
+    ]
+  },
+  "Education": {
+    "Title": "Education",
+    "Universities": [
+      {
+        "University-Name": "Michigan State University",
+        "University-Website": "https://msu.edu",
+        "University-Logo": "logo/msu.png",
+        "Degree": "B.S.",
+        "College-Name": "College of Engineering",
+        "College-Website": "https://cse.msu.edu",
+        "College-Logo": "logo/msu-engineering.png",
+        "GPA": "Cumulative GPA: 3.75/4.00",
+        "Honors": "Cum Laude",
+        "Courses": ["AI", "Big Data Analysis", "Compilers", "High Performance Computing", "Machine Learning", "Linear Algebra Applications"]
       }
     ]
   }
