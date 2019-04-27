@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Image, Label, Segment } from 'semantic-ui-react';
+import { Container, Image, Label, Segment } from 'semantic-ui-react';
 import ReactPlayer from 'react-player';
 
 import Resource from '../Resource';
@@ -36,34 +36,6 @@ export default class Projects extends Component {
             <p>{ image.label }</p>
           </Segment>
         )}
- 
-        {/*
-        <Grid columns={1} key={index}>
-
-          <Grid.Row>
-            <p>{ project.stack }</p>
-          </Grid.Row>
-
-          {project.player.map((vid, idx) =>
-            <Grid.Row key={idx}>
-              <ReactPlayer url={vid} controls />
-            </Grid.Row>
-          )}
-
-          <Grid.Row>
-            {project.overview.map((line, idx) =>
-              <p key={idx}>{ line }</p>
-            )}
-          </Grid.Row>
-
-          {project.images.map((image, idx) =>
-            <Grid.Row key={idx}>
-              <Image src={image.url} />
-              <p>{ image.label }</p>
-            </Grid.Row>
-          )}
-        </Grid>
-        */}
       </Segment>
     );
   }
