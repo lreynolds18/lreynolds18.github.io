@@ -6,24 +6,22 @@ export default class RootMenu extends Component {
   render() {
     return (
       <Menu>
-        <Menu.Item
-          name='about'
-        >
+        <Menu.Item name='about'>
           <Link to='/about'>About</Link>
         </Menu.Item>
 
-        <Menu.Item
-          name='projects'
-        >
+        <Menu.Item name='resume'>
+          <Link to='/resume'>Resume</Link>
+        </Menu.Item>
+ 
+        <Menu.Item name='projects'>
           <Link to='/projects'>Projects</Link>
         </Menu.Item>
 
-        <Menu.Item
-          name='work'
-        >
-          <Link to='/work'>Work Experience</Link>
+        <Menu.Item name='contact'>
+          <Link to='/contact'>Contact</Link>
         </Menu.Item>
-      </Menu>
+     </Menu>
     );
   }
 }

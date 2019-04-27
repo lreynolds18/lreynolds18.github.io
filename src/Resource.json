@@ -1,10 +1,14 @@
 {
   "About": {
     "Title": "About",
-    "Header1": "Hi - I'm Lucas",
-    "Header2": "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (linux, compilers, assembly, networking, cyber security, etc), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics), robotics, 3d printing and high performance computing.  In my free time, I enjoy the outdoors, learning French and cooking.",
-    "Header3": "Find me around the web at lreynolds18",
-    "ImageAlt": "Sayulita, Mexico"
+    "Header": "Hi - I'm Lucas",
+    "Summary": "I am a developer from Southeast Michigan.  I'm passionate about anything related to CS (linux, compilers, assembly, networking, cyber security, etc), but I am especially passionate about data science (including machine learning, deep learning, reinforcement learning, statistics and mathematics), robotics, 3d printing and high performance computing.  In my free time, I enjoy the outdoors, learning French and cooking.",
+    "Contact_Message": "I'd love to talk about interesting opportunities and anything computer science related.  Please feel free to contact me.",
+    "Image_Link": "./mexico.jpg",
+    "Image_Alt": "Sayulita, Mexico",
+    "Email_Url": "mailto:lreynolds18@gmail.com",
+    "Linkedin_Url": "https://www.linkedin.com/in/lreynolds18/",
+    "Github_Url": "https://github.com/lreynolds18"
   },
   "Projects": {
     "Title": "Projects",
@@ -130,7 +134,7 @@
       {
         "Company": "Hyland Software",
         "Position": "Developer 1, Metadata and EDM",
-        "Company-Logo": "logo/hyland.png",
+        "Company_Logo": "logo/hyland.png",
         "Stack": ["Angular (TypeScript)", "ASP.NET (C#, JavaScript, Less)", "WPF (C#)", "C++", "Git", "TFS", "Docker", "Microsoft SQL Server", "Oracle Database"],
         "Description": [
           "Completed Software Change Request to fix bugs and implement features on enterprise software used by 20,000 global businesses",
@@ -145,7 +149,7 @@
       {
         "Company": "Institute of Cyber-Enabled Research",
         "Position": "Technical Student",
-        "Company-Logo": "logo/icer.png",
+        "Company_Logo": "logo/icer.png",
         "Stack": ["C++ (OpenMP, OpenMPI, CUDA)", "Python (Pandas, NumPy, Matplotlib)", "Bash", "Git", "Linux (CentOS)", "HPC"],
         "Description": [
           "Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output",
@@ -161,7 +165,7 @@
       {
         "Company": "Matrix",
         "Position": "Back-end Developer",
-        "Company-Logo": "logo/matrix.png",
+        "Company_Logo": "logo/matrix.png",
         "Stack": ["PHP (CakePHP)", "JavaScript (Vanilla, jQuery, AngularJS)", "MySQL", "SVN", "HTML", "CSS", "Linux (Debian)"],
         "Description": [
           "Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page",
@@ -173,7 +177,7 @@
       {
         "Company": "Global Observatory for Ecosystem Services",
         "Position": "Back-end Developer",
-        "Company-Logo": "logo/goes.png",
+        "Company_Logo": "logo/goes.png",
         "Stack": ["Python (django)", "JavaScript (Vanilla)"],
         "Description": [
           "Programmed in python (Django), javascript, html, and css",
@@ -187,15 +191,16 @@
   },
   "Education": {
     "Title": "Education",
-    "Universities": [
+    "Degrees": [
       {
-        "University-Name": "Michigan State University",
-        "University-Website": "https://msu.edu",
-        "University-Logo": "logo/msu.png",
-        "Degree": "B.S.",
-        "College-Name": "College of Engineering",
-        "College-Website": "https://cse.msu.edu",
-        "College-Logo": "logo/msu-engineering.png",
+        "University_Name": "Michigan State University",
+        "University_Website": "https://msu.edu",
+        "University_Logo": "logo/msu.png",
+        "Degree_Type": "B.S.",
+        "Degree_Name": "Computer Science and Engineering",
+        "College_Name": "College of Engineering",
+        "College_Website": "https://cse.msu.edu",
+        "College_Logo": "logo/msu-engineering.png",
         "GPA": "Cumulative GPA: 3.75/4.00",
         "Honors": "Cum Laude",
         "Courses": ["AI", "Big Data Analysis", "Compilers", "High Performance Computing", "Machine Learning", "Linear Algebra Applications"]

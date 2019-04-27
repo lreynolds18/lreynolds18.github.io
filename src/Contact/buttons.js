@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import { IoIosMail, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 
-export default class Buttons extends Component {
+import Resource from '../Resource';
+
+export default class Contact extends Component {
   render() {
     return (
       <div>
         <Button
           color='google plus'
-          href='mailto:lreynolds18@gmail.com'
+          href={ Resource.About.Email_Url }
         ><IoIosMail /> Email</Button>
         <Button
           color='grey'
-          href='https://github.com/lreynolds18'
+          href={ Resource.About.Github_Url }
         ><IoLogoGithub /> Github</Button>
         <Button
           color='linkedin'
-          href='https://www.linkedin.com/in/lreynolds18/'
+          href={ Resource.About.Linkedin_Url }
         ><IoLogoLinkedin /> Linkedin</Button>
       </div>
     );

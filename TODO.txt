@@ -1,0 +1,4 @@
+- Add logos for everything
+- Clean up style for projects and work experience
+- Add education section
+

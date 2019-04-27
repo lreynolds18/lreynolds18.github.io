@@ -1,50 +1,79 @@
 import React, { Component } from 'react';
-import { Container, Grid, Image } from 'semantic-ui-react';
+import { Container, Grid, Image, Label, Segment } from 'semantic-ui-react';
 import ReactPlayer from 'react-player';
 
-import resource from '../resource';
+import Resource from '../Resource';
 
 export default class Projects extends Component {
   renderSingleProject(project, index) {
     return (
-      <Grid columns={1} key={index}>
-        <Grid.Row>
-          <h2>{ project.title }</h2>
-          <h4>{ project.date }</h4>
-        </Grid.Row>
+      <Segment>
+        <Label as='a' color='red' ribbon>
+          <h3>{ project.title }</h3>
+        </Label>
+        <span>{ project.date }</span>
 
-        <Grid.Row>
-          <h3>{ project.stack }</h3>
-        </Grid.Row>
+        <Segment vertical>
+            <p>{ project.stack }</p>
+        </Segment>
 
+        
         {project.player.map((vid, idx) =>
-          <Grid.Row key={idx}>
-            <ReactPlayer url={vid} controls />
-          </Grid.Row>
+          <Segment vertical key={ idx }>
+            <ReactPlayer url={ vid } controls />
+          </Segment>
         )}
 
-        <Grid.Row>
+        <Segment vertical>
           {project.overview.map((line, idx) =>
-            <p key={idx}>{ line }</p>
+            <p key={ idx }>{ line }</p>
           )}
-        </Grid.Row>
+        </Segment>
 
         {project.images.map((image, idx) =>
-          <Grid.Row key={idx}>
-            <Image src={image.url} />
+          <Segment vertical key={ idx }>
+            <Image src={ image.url } />
             <p>{ image.label }</p>
-          </Grid.Row>
+          </Segment>
         )}
-      </Grid>
+ 
+        {/*
+        <Grid columns={1} key={index}>
+
+          <Grid.Row>
+            <p>{ project.stack }</p>
+          </Grid.Row>
+
+          {project.player.map((vid, idx) =>
+            <Grid.Row key={idx}>
+              <ReactPlayer url={vid} controls />
+            </Grid.Row>
+          )}
+
+          <Grid.Row>
+            {project.overview.map((line, idx) =>
+              <p key={idx}>{ line }</p>
+            )}
+          </Grid.Row>
+
+          {project.images.map((image, idx) =>
+            <Grid.Row key={idx}>
+              <Image src={image.url} />
+              <p>{ image.label }</p>
+            </Grid.Row>
+          )}
+        </Grid>
+        */}
+      </Segment>
     );
   }
 
   render() {
     return (
       <Container>
-        <h1>{ resource.Projects.Title }</h1>
+        <h1>{ Resource.Projects.Title }</h1>
 
-        {resource.Projects.Projects.map((project, idx) =>
+        {Resource.Projects.Projects.map((project, idx) =>
           { return this.renderSingleProject(project, idx) }
         )}
       </Container>      
