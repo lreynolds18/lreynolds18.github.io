@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Segment } from 'semantic-ui-react';
+import { Container, Header } from 'semantic-ui-react';
 
 export default class RootMenu extends Component {
   render() {

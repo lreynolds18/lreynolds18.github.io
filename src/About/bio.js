@@ -1,5 +1,5 @@
-import React, { Component, createRef } from 'react';
-import { Container, Grid, Header, Image, Segment } from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Container, Grid, Header, Image } from 'semantic-ui-react';
 
 import Contact from '../Contact';
 import Resource from '../Resource';

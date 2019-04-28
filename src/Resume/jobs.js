@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Header, Label, List, Segment, Sticky } from 'semantic-ui-react';
+import { Container, Grid, Header, Label, List, Segment } from 'semantic-ui-react';
 
 import Resource from '../Resource';
 
