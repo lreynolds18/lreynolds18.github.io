@@ -7,7 +7,7 @@ import Resource from '../Resource';
 export default class Contact extends Component {
   render() {
     return (
-      <Container>
+      <Container textAlign="center">
         <Segment>
           <p>{ Resource.About.Contact_Message }</p>
           <ContactButtons />

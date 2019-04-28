@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Image, Label, Segment } from 'semantic-ui-react';
+import { Container, Grid, Header, Image, Label, List, Segment } from 'semantic-ui-react';
 import ReactPlayer from 'react-player';
 
 import Resource from '../Resource';
@@ -7,33 +7,38 @@ import Resource from '../Resource';
 export default class Projects extends Component {
   renderSingleProject(project, index) {
     return (
-      <Segment>
+      <Segment key={ index }>
         <Label as='a' color='red' ribbon>
-          <h3>{ project.title }</h3>
+          <h3>{ project.Title }</h3>
         </Label>
-        <span>{ project.date }</span>
+        <span>{ project.Start_Date } - { project.End_Date }</span>
 
         <Segment vertical>
-            <p>{ project.stack }</p>
+            <p>{ project.Stack }</p>
         </Segment>
 
-        
-        {project.player.map((vid, idx) =>
-          <Segment vertical key={ idx }>
-            <ReactPlayer url={ vid } controls />
-          </Segment>
-        )}
-
-        <Segment vertical>
-          {project.overview.map((line, idx) =>
-            <p key={ idx }>{ line }</p>
+        <Grid>
+          {project.Player.map((vid, idx) =>
+            <Grid.Row centered key={ idx}>
+              <Segment vertical>
+                <ReactPlayer url={ vid } controls centered />
+              </Segment>
+            </Grid.Row>
           )}
+        </Grid>
+
+        <Segment vertical>
+          <List as='ul'>
+            {project.Overview.map((desc, idx) =>
+              <List.Item as='li' key={ idx }>{ desc }</List.Item>
+            )}
+          </List>
         </Segment>
 
-        {project.images.map((image, idx) =>
-          <Segment vertical key={ idx }>
-            <Image src={ image.url } />
-            <p>{ image.label }</p>
+        {project.Images.map((image, idx) =>
+          <Segment vertical textAlign='center' key={ idx }>
+            <Image src={ image.Url } size='large' centered />
+            <p>{ image.Label }</p>
           </Segment>
         )}
       </Segment>
@@ -43,7 +48,7 @@ export default class Projects extends Component {
   render() {
     return (
       <Container>
-        <h1>{ Resource.Projects.Title }</h1>
+        <Header as='h1'>{ Resource.Projects.Title }</Header>
 
         {Resource.Projects.Projects.map((project, idx) =>
           { return this.renderSingleProject(project, idx) }

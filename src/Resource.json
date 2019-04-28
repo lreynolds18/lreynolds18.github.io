@@ -10,147 +10,36 @@
     "Linkedin_Url": "https://www.linkedin.com/in/lreynolds18/",
     "Github_Url": "https://github.com/lreynolds18"
   },
-  "Projects": {
-    "Title": "Projects",
-    "Projects": [
-      {
-        "id": "1",
-        "date": "8/31/16 - 5/1/17",
-        "title": "GE PETT: Predix-Enabled Toy Train",
-        "stack": "Python (RPi.GPIO, paho.mqtt, csv, json, neopixel, Adafruit_BMP), C (Arduino), JavaScript (Polymer), Predix, Pi-SPROG, Raspberry Pi, Arduino, HTML, CSS",
-        "overview": [ 
-          "Worked on a team of five students in MSU senior capstone course",
-          "Designed a N-scale toy train set to demonstrate the power of GE’s Predix",
-          "Worked directly with customer to develop a completed project",
-          "Used Raspberry Pis and an Arduino to collect data about the trains",
-          "Collected data on Predix Cloud by sending data over MQTT and Websockets",
-          "Created a web application to visual the data and analytics"
-        ],
-        "images": [
-          {
-            "url": "projects/pett/team-photo.jpg",
-            "label": "Team photo"
-          }
-        ],
-        "player": [
-          "https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2"
-        ],
-        "links": [
-          {
-            "url": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/",
-            "label": "Design day poster can be found here: ",
-            "link": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/"
-          },
-          {
-            "url": "https://github.com/lreynolds18/MSU-Capstone-Source-Code",
-            "label": "Code that controls trains can be found here: ",
-            "link": "https://github.com/lreynolds18/MSU-Capstone-Source-Code"
-          },
-          {
-            "url": "https://github.com/lreynolds18/MSU-Capstone",
-            "label": "Code for website can be found here: ",
-            "link": "https://github.com/lreynolds18/MSU-Capstone"
-          }
-        ]
-      },     
-      {
-        "id": "2",
-        "date": "8/31/16 - 5/1/17",
-        "title": "Voice Analyzer",
-        "stack": "Python (pandas, librosa, sklearn, scipy, numpy, matplotlib, urllib, BeautifulSoup, Jupyter Notebook)",
-        "overview": [ 
-          "Created an application that can detect gender, age, and dialect in any recording of human voice",
-          "Wrote a website crawler to download over 15,000 .wav files of human voice",
-          "Wrote another script that collected provided data (gender, age, dialect) and processed the .wav files",
-          "Used librosa to process the .wav files into 153 features",
-          "Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)",
-          "Used machine learning techniques to create a reasonable good model to classify human voice"
-        ],
-        "images": [],
-        "player": [],
-        "links": [
-          {
-            "url": "https://github.com/lreynolds18/Voice-Analyzer",
-            "label": "All code can be found here: ",
-            "link": "https://github.com/lreynolds18/Voice-Analyzer"
-          },
-          {
-            "url": "../../public/test-voice.zip",
-            "label": "Download script to record your voice and test models here: ",
-            "link": "here"
-          }
-        ]
-      }, 
-      {
-        "id": "3",
-        "date": "1/28/18 - Present",
-        "title": "Anet A8",
-        "stack": "3d Printing, Arduino, Cura, Blender, Tinkercad",
-        "image": "",
-        "overview": [ 
-          "Built and upgraded an Anet A8 printer.",
-          "Installed an X belt tensior and X axis drag chain",
-          "Installed an Y belt tensior and Y axis drag chain",
-          "Installed a filament guide",
-          "Installed various frame supports",
-          "Installed mosfet on hot bed and extruder to increase safety",
-          "Soldered wires directly on hot bed",
-          "Installed a proximity sensor to ALB (auto level bed)"
-        ],
-        "images": [
-          {
-            "url": "projects/anet/box.jpg",
-            "label": "I built out the kit that was shipped to me"
-          },
-          {
-            "url": "projects/anet/half_built.jpg",
-            "label": ""
-          },
-          {
-            "url": "projects/anet/fully_built.jpg",
-            "label": ""
-          },
-          {
-            "url": "projects/anet/benchy_print.jpg",
-            "label": "I've been pretty happy with the print quality.  Here's the printer printing out benchy which is a torture test for 3d printers"
-          },
-          {
-            "url": "projects/anet/final_benchy.jpg",
-            "label": ""
-          },
-          {
-            "url": "projects/anet/random_prints.jpg",
-            "label": "Finally, here are some random prints"
-          }
-        ],
-        "player": [],
-        "links": []
-      }
-    ]
-  },
   "Work": {
     "Title": "Work Experience",
     "Jobs": [
       {
         "Company": "Hyland Software",
         "Position": "Developer 1, Metadata and EDM",
+        "Start_Date": "September 2018",
+        "End_Date": "Present",
         "Company_Logo": "logo/hyland.png",
-        "Stack": ["Angular (TypeScript)", "ASP.NET (C#, JavaScript, Less)", "WPF (C#)", "C++", "Git", "TFS", "Docker", "Microsoft SQL Server", "Oracle Database"],
+        "Stack": ["Angular (TypeScript)", "ASP.NET (C#, JavaScript, Less)", "WPF (C#)", "C++", "Git (Bitbucket)", "TFS", "Docker", "Microsoft SQL Server", "Oracle Database"],
         "Description": [
           "Completed Software Change Request to fix bugs and implement features on enterprise software used by 20,000 global businesses",
-          "Increased product market share by enabling Vietnamese for Web Server", 
-          "Made huge improvement to internal UI libraries used in Web Client",
-          "Threat modeled security vulnerabilities and determined/fixed vulnerabilites found from static code analyzers",
-          "Designed new modernization product for keywords and electronic document management",
+          "Increased product market share by adding Vietnamese language support for Web Client & Server", 
+          "Made large improvements to Web Client's user interface",
+          "Lead development and testing for new Keyword modernization product in Angular",
+          "Provided solution to customers facing issues related to EDM, Keywords, and Web Client & Server",
+          "Threat modeled security vulnerabilities",
+          "Responded to security vulnerabilities from static code analyzers",
           "Provided constructive feedback on code reviews",
-          "Provided solution to customers facing issues related to EDM, Keywords, and Web Client and Server"
+          "Worked with QA to assure a secure and high quality product",
+          "Instructor for Hy-Tech Club C# 101 course were I taught and mentored 12 high school students over 13 weeks"
         ]
       },
       {
         "Company": "Institute of Cyber-Enabled Research",
         "Position": "Technical Student",
+        "Start_Date": "June 2016",
+        "End_Date": "May 2017",
         "Company_Logo": "logo/icer.png",
-        "Stack": ["C++ (OpenMP, OpenMPI, CUDA)", "Python (Pandas, NumPy, Matplotlib)", "Bash", "Git", "Linux (CentOS)", "HPC"],
+        "Stack": ["C++ (OpenMP, OpenMPI, OpenACC, CUDA)", "Python (Pandas, NumPy, Matplotlib)", "Bash", "Git", "Linux (CentOS)", "HPC"],
         "Description": [
           "Wrote scripts to run batch jobs to benchmark the high performance computer’s input and output",
           "Used benchmarking programs and wrote programs with OpenMP and OpenMPI to record file read and file write bandwidth", 
@@ -165,26 +54,25 @@
       {
         "Company": "Matrix",
         "Position": "Back-end Developer",
+        "Start_Date": "May 2015",
+        "End_Date": "May 2016",
         "Company_Logo": "logo/matrix.png",
         "Stack": ["PHP (CakePHP)", "JavaScript (Vanilla, jQuery, AngularJS)", "MySQL", "SVN", "HTML", "CSS", "Linux (Debian)"],
         "Description": [
           "Added user functionality to the site by creating a login modal, forget password form, upload and crop profile picture, and profile page",
-          "Created and planned the layout for an ARCS plugin in angular javascript",
-          "Edited the ARCS mysql database to config with the plugin",
-          "Wrote scripts to clean up database"
+          "Created and planned the layout for an ARCS plugin in Angular JavaScript"
         ]
       },
       {
         "Company": "Global Observatory for Ecosystem Services",
         "Position": "Back-end Developer",
+        "Start_Date": "June 2014",
+        "End_Date": "November 2014",
         "Company_Logo": "logo/goes.png",
-        "Stack": ["Python (django)", "JavaScript (Vanilla)"],
+        "Stack": ["Python (Django)", "JavaScript (Vanilla)"],
         "Description": [
-          "Programmed in python (Django), javascript, html, and css",
           "Implemented a stratified plot sampling algorithm and initial values for a sampling design form",
-          "Updated the mapping interface from Google Leaflet to ArcGis ESRI Map",
-          "Organized large sections of code, improved code logic, and designed code to scale",
-          "Assisted with troubleshooting IT problems"
+          "Updated the mapping interface from Google Leaflet to ArcGis ESRI Map"
         ]
       }
     ]
@@ -204,6 +92,127 @@
         "GPA": "Cumulative GPA: 3.75/4.00",
         "Honors": "Cum Laude",
         "Courses": ["AI", "Big Data Analysis", "Compilers", "High Performance Computing", "Machine Learning", "Linear Algebra Applications"]
+      }
+    ]
+  },
+  "Projects": {
+    "Title": "Projects",
+    "Projects": [
+      {
+        "Id": "1",
+        "Start_Date": "January 2017",
+        "End_Date": "May 2017",
+        "Title": "GE PETT: Predix-Enabled Toy Train",
+        "Stack": "Python (RPi.GPIO, paho.mqtt, csv, json, neopixel, Adafruit_BMP), C (Arduino), JavaScript (Polymer), Predix, Pi-SPROG, Raspberry Pi, Arduino, HTML, CSS",
+        "Overview": [ 
+          "Worked on a team of five students in MSU senior capstone course",
+          "Designed a N-scale toy train set to demonstrate the power of GE’s Predix",
+          "Worked directly with customer to develop a completed project",
+          "Used Raspberry Pis and an Arduino to collect data about the trains",
+          "Collected data on Predix Cloud by sending data over MQTT and Websockets",
+          "Created a web application to visual the data and analytics"
+        ],
+        "Images": [
+          {
+            "Url": "projects/pett/team-photo.jpg",
+            "Label": "Team photo"
+          }
+        ],
+        "Player": [
+          "https://www.youtube.com/embed/jKzvhQf4yPY?ecver=2"
+        ],
+        "Links": [
+          {
+            "Url": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/",
+            "Label": "Design day poster can be found here: ",
+            "Link": "http://www.cse.msu.edu/~cse498/2017-01/projects/ge/"
+          },
+          {
+            "Url": "https://github.com/lreynolds18/MSU-Capstone-Source-Code",
+            "Label": "Code that controls trains can be found here: ",
+            "Link": "https://github.com/lreynolds18/MSU-Capstone-Source-Code"
+          },
+          {
+            "Url": "https://github.com/lreynolds18/MSU-Capstone",
+            "Label": "Code for website can be found here: ",
+            "Link": "https://github.com/lreynolds18/MSU-Capstone"
+          }
+        ]
+      },     
+      {
+        "Id": "2",
+        "Start_Date": "January 2017",
+        "End_Date": "May 2017",
+        "Title": "Voice Analyzer",
+        "Stack": "Python (pandas, LibROSA, scikit-learn, SciPY, NumPy, Matplotlib, urllib, BeautifulSoup, Jupyter Notebook)",
+        "Overview": [ 
+          "Created an application that can detect gender, age, and dialect in any recording of human voice",
+          "Wrote a website crawler to download over 15,000 .wav files of human voice",
+          "Wrote another script that collected provided data (gender, age, dialect) and processed the .wav files",
+          "Used librosa to process the .wav files into 153 features",
+          "Wrote a script to clean data that was provided (generalized specifics - i.e. dialect for Alberta, Ca was Canada)",
+          "Used machine learning techniques to create a reasonable good model to classify human voice"
+        ],
+        "Images": [],
+        "Player": [],
+        "Links": [
+          {
+            "Url": "https://github.com/lreynolds18/Voice-Analyzer",
+            "Label": "All code can be found here: ",
+            "Link": "https://github.com/lreynolds18/Voice-Analyzer"
+          },
+          {
+            "Url": "../../public/test-voice.zip",
+            "Label": "Download script to record your voice and test models here: ",
+            "Link": "here"
+          }
+        ]
+      }, 
+      {
+        "Id": "3",
+        "Start_Date": "January 2018",
+        "End_Date": "Present",
+        "Title": "Anet A8",
+        "Stack": "3d Printing, Arduino, Cura, Blender, Tinkercad",
+        "Image": "",
+        "Overview": [ 
+          "Built and upgraded an Anet A8 printer.",
+          "Installed an X belt tensior and X axis drag chain",
+          "Installed an Y belt tensior and Y axis drag chain",
+          "Installed a filament guide",
+          "Installed various frame supports",
+          "Installed mosfet on hot bed and extruder to increase safety",
+          "Soldered wires directly on hot bed",
+          "Installed a proximity sensor to ALB (auto level bed)"
+        ],
+        "Images": [
+          {
+            "Url": "projects/anet/box.jpg",
+            "Label": "I built out the kit that was shipped to me"
+          },
+          {
+            "Url": "projects/anet/half_built.jpg",
+            "Label": ""
+          },
+          {
+            "Url": "projects/anet/fully_built.jpg",
+            "Label": ""
+          },
+          {
+            "Url": "projects/anet/benchy_print.jpg",
+            "Label": "I've been pretty happy with the print quality.  Here's the printer printing out benchy which is a torture test for 3d printers"
+          },
+          {
+            "Url": "projects/anet/final_benchy.jpg",
+            "Label": ""
+          },
+          {
+            "Url": "projects/anet/random_prints.jpg",
+            "Label": "Finally, here are some random prints"
+          }
+        ],
+        "Player": [],
+        "Links": []
       }
     ]
   }

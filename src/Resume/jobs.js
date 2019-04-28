@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Label, List, Segment } from 'semantic-ui-react';
+import { Container, Grid, Header, Label, List, Segment, Sticky } from 'semantic-ui-react';
 
 import Resource from '../Resource';
 
@@ -7,7 +7,8 @@ export default class Jobs extends Component {
   render() {
     return (
       <Container>
-        <h1>{ Resource.Work.Title }</h1>
+        <Header as='h1'>{ Resource.Work.Title }</Header>
+
         <Grid>
           {Resource.Work.Jobs.map(function(job, index) {
             return (
@@ -17,10 +18,10 @@ export default class Jobs extends Component {
                     <Label as='a' color='red' ribbon>
                       <h3>{ job.Company }</h3>
                     </Label>
-                    <span>{ job.Position }</span>
+                    <span>{ job.Position }, { job.Start_Date } - { job.End_Date }</span>
 
                     <Segment vertical>
-                      <p>{job.Stack.join(", ")}</p>
+                      <p>{ job.Stack.join(", ") }</p>
                     </Segment>
 
                     <Segment vertical>

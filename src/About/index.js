@@ -1,36 +1,34 @@
-import React, { Component } from 'react';
-import { Container, Grid, Image } from 'semantic-ui-react';
+import React, { Component, Fragment } from 'react';
+import { Container, Grid } from 'semantic-ui-react';
 
+import AboutBio from './bio';
 import Contact from '../Contact';
 import Projects from '../Projects';
-import Resource from '../Resource';
+
 import Resume from '../Resume';
 
 export default class About extends Component {
   render() {
     return (
-      <div>
-        <Container>
-          <h1>{ Resource.About.Title }</h1>
-          <Grid columns={2} divided>
-            <Grid.Row>
-              <Grid.Column>
-                <Image src={ Resource.About.Image_Link } alt={ Resource.About.Image_Alt } size='large' circular />
-              </Grid.Column>
+      <Container>
+      <Grid>
+        <Grid.Row>
+          <AboutBio />
+        </Grid.Row>
 
-              <Grid.Column>
-                <h3>{ Resource.About.Header }</h3>
-                <p>{ Resource.About.Summary }</p>
-                <Contact />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
+        <Grid.Row>
+          <Resume />
+        </Grid.Row>
 
-        <Resume />
-        <Projects />
-        <Contact />
-      </div>
+        <Grid.Row>
+          <Projects />
+        </Grid.Row>
+
+        <Grid.Row>
+          <Contact />
+        </Grid.Row>
+      </Grid>
+      </Container>
     );
   }
 }

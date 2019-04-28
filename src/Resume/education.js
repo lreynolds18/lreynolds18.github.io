@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Grid, Label, Segment } from 'semantic-ui-react';
+import { Container, Grid, Header, Label, Segment } from 'semantic-ui-react';
 
 import Resource from '../Resource';
 
@@ -7,7 +7,8 @@ export default class Education extends Component {
   render() {
     return (
       <Container>
-        <h1>{ Resource.Education.Title }</h1>
+        <Header as='h1'>{ Resource.Education.Title }</Header>
+
         <Grid>
           {Resource.Education.Degrees.map(function(degree, index) {
             return (

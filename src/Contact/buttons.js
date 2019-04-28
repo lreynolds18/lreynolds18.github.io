@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Button } from 'semantic-ui-react';
 import { IoIosMail, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 
@@ -7,9 +7,9 @@ import Resource from '../Resource';
 export default class Contact extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <Button
-          color='google plus'
+          color='red'
           href={ Resource.About.Email_Url }
         ><IoIosMail /> Email</Button>
         <Button
@@ -20,7 +20,7 @@ export default class Contact extends Component {
           color='linkedin'
           href={ Resource.About.Linkedin_Url }
         ><IoLogoLinkedin /> Linkedin</Button>
-      </div>
+      </Fragment>
     );
   }
 }
